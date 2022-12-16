@@ -30,7 +30,7 @@ class StoreSkillRequest extends FormRequest
             'contact_no' => ['required', 'digits:11'],
             'age' => ['required'],
             'department' => ['required'],
-            'slug' => ['required', Rule::unique('skills')->ignore($this->skill)]
+            'slug' => ['required'],
         ];
     }
 }
