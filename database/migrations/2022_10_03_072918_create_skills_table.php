@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('address');
+            $table->string('contact_no');
+            $table->string('age');
+            $table->string('department');
             $table->string('slug');
             $table->timestamps();
         });

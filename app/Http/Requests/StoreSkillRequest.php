@@ -25,8 +25,11 @@ class StoreSkillRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'min:3', 'max:20'],
-            //'slug' => ['required', 'unique:skills,slug,' . $this->skill->id]
+            'name' => ['required'],
+            'address' => ['required'],
+            'contact_no' => ['required', 'digits:11'],
+            'age' => ['required'],
+            'department' => ['required'],
             'slug' => ['required', Rule::unique('skills')->ignore($this->skill)]
         ];
     }
